@@ -8,6 +8,10 @@
   </head>
   <body>
     <button onclick="subscribe()">Subscribe</button>
+    
+      <div class="pushkey">
+      Pushkey
+      </div>
 
     <script>
       async function subscribe() {
@@ -18,6 +22,8 @@
             'BBBhWEeEUR2StKf2YPKrupFfAsZMk173GQYIN1qTtkvy1cceaLJNLmF3RNWeCtv2n1wBJJ5efylvNUQk0yVPAEQ'
         });
         console.log(JSON.stringify(push));
+        const key = document.querySelector('.pushkey');
+        key.textContent = JSON.stringify(push);
       }
 
       if ('serviceWorker' in navigator) {
