@@ -8,10 +8,6 @@
   </head>
   <body>
     <button onclick="subscribe()">Subscribe</button>
-    
-      <div class="pushkey">
-      Pushkey
-      </div>
 
     <script>
       async function subscribe() {
@@ -20,8 +16,6 @@
           userVisibleOnly: true 
         });
         console.log(JSON.stringify(push));
-        const key = document.querySelector('.pushkey');
-        key.textContent = JSON.stringify(push);
       }
 
       if ('serviceWorker' in navigator) {
